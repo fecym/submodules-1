@@ -3,24 +3,21 @@
 </template>
 
 <script>
-import {mapState, mapActions} from 'vuex'
-
+import { mapState, mapActions } from "vuex";
 export default {
   name: "alarmList",
   computed: {
     ...mapState({
-      msg: state => state.alarm.msg
-    })
+      msg: state => state.alarm.msg,
+    }),
   },
   created() {
-    this.setMsg('这是报警页面')
+    this.setMsg("这是报警页面");
   },
   methods: {
-    ...mapActions(['setMsg'])
-  }
-}
+    ...mapActions("alarm", ["setMsg"]),
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

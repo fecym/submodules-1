@@ -2,6 +2,6 @@ export default [
   {
     path: "/trouble",
     name: "Trouble",
-    component: () => import(`./troubleList`),
+    component: () => import(/* webpackChunkName: "Trouble" */ `./troubleList`),
   },
 ];
